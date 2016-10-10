@@ -2,22 +2,13 @@
   ob_start();
   session_start();
   require_once 'dbconnect.php';
-  require_once '../core/fetch.php';
 
-  
+
   // if session is not set this will redirect to login page
   if( !isset($_SESSION['user']) ) {
     header("Location: index.php");
     exit;
   }
-
-  
-  // select loggedin users detail
-  $res=mysqli_query($conn,"SELECT * FROM users WHERE userId=".$_SESSION['user']);
-  $userRow=mysqli_fetch_array($conn,$res);
-
-
-  $sql = "UPDATE users SET skills = 'val' WHERE userName ='".$_SESSION['stud_name']."'";
 
 
 ?>
@@ -51,7 +42,7 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            
+
             <li class="dropdown">
 
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -72,44 +63,36 @@
       <h3>Welcome Admin <?php echo $_SESSION['stud_name'] ?></h3>
 
       <div class="container">
-      
+
         <div class="page-header">
           <!-- <h3>Hi Admin <?php echo $_SESSION['stud_name']; ?></h3> -->
         </div>
-          
-      
+
+
       </div>
-    
+
   </div>
 
-    
+
         <a href="../core/display.php">View Data</a>
         <a href="../core/edit.php">Edit </a>
         <a href="../core/sorting.php">Sort </a>
 
- 
+
       <input type="text" value="<?php echo $_SESSION['stud_name'] ?>">
-    <?php 
+    <?php
      ?>
 
      <div class="display">
        <h1><?php echo $_SESSION['stud_name'] ?></h1>
      </div>
-    
-    <?php 
+
+    <?php
          echo $_SESSION['stud_email'];
      ?>
-     <?php 
+     <?php
          echo $_SESSION['stud_id'];
      ?>
-     <?php echo "var"; ?>
-
-           
-           <?php 
-               require '../core/chk.php';
-            ?>
-
-
 
             <script src="../assets/js/jquery-1.11.3-jquery.min.js"></script>
             <script src="../assets/js/bootstrap.min.js"></script>
