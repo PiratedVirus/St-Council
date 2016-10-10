@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <title>Student Council</title>
 </head>
-<body> 
+<body>
 
 <nav id="menu">
     <div class="nav-wrapper">
@@ -33,7 +33,7 @@
         <li><a href="badges.html">Components</a></li>
         <li><a href="collapsible.html">JavaScript</a></li>
       </ul>
-      
+
 
     </div>
   </nav>
@@ -42,9 +42,8 @@
 	<div class="row">
 	    <form name='form' method="POST" action="testing.php" class="col s12">
 
-		    <?php 
+		    <?php
 
-		      // require_once 'chk.php';
 		      require_once 'dbconnect.php';
 		      ob_start();
 		      session_start();
@@ -58,7 +57,7 @@
 		    	<div class="input-field col s12">
 		    	  <input id="icon_prefix" type="text" name="name" value="<?php echo $_SESSION['stud_name'] ?>" class="validate">
 		    	  <label for="icon_prefix">Name</label>
-		    	</div> 
+		    	</div>
 
 		        <div class="input-field col s6">
 		          <input id="icon_prefix" type="text" name="enrollment" value="<?php echo $_SESSION['stud_id'] ?>" class="validate">
@@ -69,7 +68,7 @@
 				<!-- Never modify names of any of these inputs.They are further linked in testing.php -->
 				<!-- Not passing entries of Name and Enrollment number for editing, since they r unique -->
 				<!-- consider skills as BRANCH in whole project -->
-		      
+
 
 		        <div class="input-field col s6">
 		          <input id="icon_prefix" type="text" name="branch" value="<?php echo $_SESSION['stud_skills'] ?>" class="branch-edit validate">
@@ -90,7 +89,7 @@
 		        <div class="input-field col m6 s12">
 		          <label for="birthdate">Birth Date</label>
 		          <input id="birthdate" type="date" name="dob" value="<?php echo $_SESSION['stud_dob'] ?>" class="datepicker">
-		        </div> 
+		        </div>
 
 		        <div class="input-field col s12 m6">
 		          <input id="icon_prefix" type="text" name="year" value="<?php echo $_SESSION['stud_academic_year'] ?>" class="year">
@@ -274,7 +273,7 @@
 
 
 			<div class="center update-button">
-						
+
 		        <button class="btn waves-effect waves-light" type="submit" name="update" style="
 			    margin-top: 50px;">UPDATE
 		          <!-- <i class="material-icons right">send</i> -->
@@ -304,7 +303,7 @@
 		<input id="icon_prefix" type="text" name="mobile" placeholder="Mobile number" class="validate">
 		<label for="icon_prefix">mobile Number</label>
 
-		<input type="submit" name="submit" value="Submit">  
+		<input type="submit" name="submit" value="Submit">
 	</form>
  -->
 
@@ -322,7 +321,7 @@
 		       echo "The select function is called.";
 
 		    }
-	    
+
 	    function insert()
 		    {
 		       echo "The insert function is called.";
@@ -339,7 +338,7 @@
 			    echo $temp_id;
 			    echo "	nothing print";
 			  	echo "	asdf";
-		}  
+		}
 
 		function fetcher() {
 		    define('DB_NAME','students');
@@ -357,7 +356,7 @@
 		        die('Cant connect' .mysqli_error());
 		    }
 
-		    $db_sel = mysqli_select_db($link, DB_NAME); 
+		    $db_sel = mysqli_select_db($link, DB_NAME);
 
 		    if(!$db_sel) {
 		        die('cant use' .DB_NAME. ':' .mysqli_error());
@@ -414,14 +413,14 @@
 
 		           mysqli_close($link);
 		}
-		
+
 	 ?>
 </div>
 
 
 
-<script src="../Assets/js/jquery-1.11.3-jquery.min.js"></script>  
-<script src="../Assets/js/materialize.js"></script>  
+<script src="../Assets/js/jquery-1.11.3-jquery.min.js"></script>
+<script src="../Assets/js/materialize.js"></script>
 <script src="../Assets/js/init.js"></script>
 </body>
 </html>
