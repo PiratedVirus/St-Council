@@ -1,4 +1,4 @@
-<?php 
+<?php
 
     ob_start();
     session_start();
@@ -45,7 +45,7 @@
         <li><a href="badges.html">Components</a></li>
         <li><a href="collapsible.html">JavaScript</a></li>
       </ul>
-      
+
 
     </div>
   </nav>
@@ -63,39 +63,35 @@
       <div class="col s12 center">
         <a class="waves-effect waves-light btn-large update-btn" href="core/edit.php">UPDATE PROFILE</a>
       </div>
-      
+
       <p class="nothnig-to-show gray left"> <span id="main-msg">Sorry..! Right Now there's nothing to show :( </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere impedit maxime at reiciendis perspiciatis perferendis, consequuntur recusandae voluptatum tempora eaque?</p>
     </div>
   </div>
-	
+
 
    <div class="display">
        <h6><?php echo $_SESSION['stud_name'] ?></h6>
      </div>
-    
-    <?php 
+
+    <?php
          echo $_SESSION['stud_email'];
      ?>
       <h7>Hi <?php echo $_SESSION['stud_name']; ?></h7>
-     <?php 
+     <?php
          echo $_SESSION['stud_id'];
      ?>
      <input type="text" value="<?php echo $_SESSION['stud_name'] ?>">
 
     <?php echo "var"; ?>
 
-           
-           <?php 
-               require 'core/chk.php';
-            ?> 
-
-
-
-
-    <script src="Assets/js/jquery-1.11.3-jquery.min.js"></script>  
-    <script src="Assets/js/materialize.js"></script>  
-    <script src="Assets/js/init.js"></script>
     
+
+
+
+    <script src="Assets/js/jquery-1.11.3-jquery.min.js"></script>
+    <script src="Assets/js/materialize.js"></script>
+    <script src="Assets/js/init.js"></script>
+
 </body>
 </html>
 <?php ob_end_flush(); ?>
