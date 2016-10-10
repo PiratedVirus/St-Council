@@ -15,49 +15,73 @@
 	}
 
 	if (isset($_POST['FE'])) {
-		$fe = 'FE';
+		$fe = 'First Year';
 	  } else {
 	  	$fe = '';
 	}
 
 	if (isset($_POST['SE'])) {
-		$se = 'SE';
+		$se = 'Second Year';
 	} else {
 		$se = '';
 	}
 
 	if (isset($_POST['TE'])) {
-	    $te = 'TE';
+	    $te = 'Third Year';
 	} else {
 		$te = '';
 	}
 
 	if (isset($_POST['BE'])) {
-		$be = 'BE';
+		$be = 'Final Year';
 	} else {
 		$be ='';
 	}
 
 	if (isset($_POST['CSE'])) {
-		$cse = 'CSE';
+		$cse = 'Computer Science And Engineering';
 	} else {
 		$cse ='';
 	}
 
 	if (isset($_POST['Mech'])) {
-		$mech = 'MECH';
+		$mech = 'Mechanical Engineering';
 	} else {
 		$mech ='';
 	}
 
 	if (isset($_POST['Civil'])) {
-		$civil = 'civil';
+		$civil = 'Civil Engineering';
 	} else {
 		$civil ='';
 	}
 
+	if (isset($_POST['Entc'])) {
+		$entc = 'Elctronics And Telecommunications';
+	} else {
+		$entc ='';
+	}
+
+	if (isset($_POST['Elect'])) {
+		$elect = 'Electrical Engineering';
+	} else {
+		$elect ='';
+	}
+
+	if (isset($_POST['It'])) {
+		$it = 'Information Technology';
+	} else {
+		$it ='';
+	}
+
+	if (isset($_POST['Mca'])) {
+		$mca = 'MCA';
+	} else {
+		$mca ='';
+	}
+
 	if (isset($_POST['single-cse'])) {
-			$query_cse = "SELECT * FROM users WHERE branch = 'cse'";
+			$query_cse = "SELECT * FROM users WHERE Skills = 'Computer Science And Engineering'";
 
 			    $cse_result = $conn->query($query_cse);
 
@@ -65,17 +89,17 @@
 			         echo "<table> <tr><th>ID</th> <th>Name</th> <th>Year</th></tr>";
 			         // output data of each row
 			         while($row = $cse_result->fetch_assoc()) {
-			             echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["age"]."</td> <td>".$row["song"]."</td> <td>".$row["class"]."</td> <td>".$row["branch"]."</td> </tr>";
+			         	echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["academic_year"]."</td> <td>".$row["mobile"]."</td> <td>".$row["web"]."</td>  </tr>";
 			         }
 			         echo "</table>";
 			    } else {
 			         echo "0 results";
 			    }
 
-		} 
+		}
 
 	if (isset($_POST['single-mech'])) {
-			$query_mech = "SELECT * FROM users WHERE branch = 'mech'";
+			$query_mech = "SELECT * FROM users WHERE Skills = 'Mechanical Engineering'";
 
 			    $mech_result = $conn->query($query_mech);
 
@@ -83,16 +107,16 @@
 			         echo "<table> <tr><th>ID</th> <th>Name</th> <th>Year</th></tr>";
 			         // output data of each row
 			         while($row = $mech_result->fetch_assoc()) {
-			             echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["age"]."</td> <td>".$row["song"]."</td> <td>".$row["class"]."</td> <td>".$row["branch"]."</td> </tr>";
+			         	echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["academic_year"]."</td> <td>".$row["mobile"]."</td>  </tr>";
 			         }
 			         echo "</table>";
 			    } else {
 			         echo "0 results";
 			    }
 
-		} 
+		}
 	if (isset($_POST['single-civil'])) {
-			$query_civil = "SELECT * FROM users WHERE branch = 'civil'";
+			$query_civil = "SELECT * FROM users WHERE Skills = 'Civil Engineering'";
 
 			    $civil_result = $conn->query($query_civil);
 
@@ -100,14 +124,17 @@
 			         echo "<table> <tr><th>ID</th> <th>Name</th> <th>Year</th></tr>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
-			             echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["age"]."</td> <td>".$row["song"]."</td> <td>".$row["class"]."</td> <td>".$row["branch"]."</td> </tr>";
+			         	echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["academic_year"]."</td> <td>".$row["mobile"]."</td> <td>".$row["web"]."</td>  </tr>";
 			         }
 			         echo "</table>";
 			    } else {
 			         echo "0 results";
 			    }
 
-		} 
+		}
+
+
+
 ?>
 	<!DOCTYPE html>
 	<html>
@@ -116,12 +143,12 @@
 		<link rel="stylesheet" href="tables.css">
 	</head>
 	<body>
-	
+
 		<form action="sorting.php" method="POST">
-			<h3>sort by</h3>  
+			<h3>sort by</h3>
 
 				<!-- <input type="text" list="year" name="user_year" placeholder="year">
-					
+
 					<datalist id="year">
 					    <option value="FE"/>
 					    <option value="SE"/>
@@ -135,7 +162,7 @@
 
 
 				<input type="text" list="branches" name="user_branch" placeholder="branch">
-					
+
 					<datalist id="branches">
 					    <option value="CSE"/>
 					    <option value="Mech"/>
@@ -147,16 +174,19 @@
 
 					<div class="form-group">
 						 <hr />
-						 <input type="checkbox" name="FE">FE
-						 <input type="checkbox" name="SE">SE
-						 <input type="checkbox" name="TE">TE
-						 <input type="checkbox" name="BE">BE
+						 <input type="checkbox" name="FE">First Year
+						 <input type="checkbox" name="SE">Second Year
+						 <input type="checkbox" name="TE">Third Year
+						 <input type="checkbox" name="BE">Final Year
 					</div>
 					<div class="form-group">
 						 <hr />
-						 <input type="checkbox" name="CSE">CSE
-						 <input type="checkbox" name="Mech">Mech
-						 <input type="checkbox" name="Civil">Civil
+						 <input type="checkbox" name="CSE">Computer Science And Engineering
+						 <input type="checkbox" name="Mech">Mechanical Engineering
+						 <input type="checkbox" name="Civil">Civil Engineering
+						 <input type="checkbox" name="Elect">Electrical Engineering
+						 <input type="checkbox" name="Entc">Elctronics And Telecommunications
+						 <input type="checkbox" name="It">Information Technology
 					</div>
 
 		    <input type="submit" value="Submit">
@@ -165,44 +195,55 @@
 		</form>
 
 		<form action="" method="POST" name="singular">
-			
+
 			<input type="submit" value="CSE" name="single-cse">
 
 		</form>
-		
+
 		<form action="" method="POST" name="singular">
-			
+
 			<input type="submit" value="mech" name="single-mech">
 
 		</form>
-		
+
 		<form action="" method="POST" name="singular">
-			
+
 			<input type="submit" value="Civil" name="single-civil">
 
 		</form>
-		
-		<?php 
 
-				// $branch_input = $_POST['user_branch'];
-				// echo $branch_input;
+		<form action="" method="POST" name="singular">
 
-				// $year_input = $_POST['user_year'];
-				// echo $year_input;
+			<input type="submit" value="entc" name="single-entc">
 
+		</form>
 
+		<form action="" method="POST" name="singular">
 
-				$sql = "SELECT * FROM users WHERE (class = '$fe' or class = '$se' or class = '$te' or class = '$be') and ( branch = '$cse' or branch = '$mech' or branch = '$civil' ) ";
+			<input type="submit" value="elect" name="single-elect">
+
+		</form>
+
+		<form action="" method="POST" name="singular">
+
+			<input type="submit" value="it" name="single-it">
+
+		</form>
+
+		<?php
+
+				$sql = "SELECT * FROM users WHERE (academic_year = '$fe' or academic_year = '$se' or academic_year = '$te' or academic_year = '$be') and ( Skills = '$cse' or Skills = '$mech' or Skills = '$civil' or Skills = '$entc' or Skills = '$it' or Skills = '$elect' ) ";
 			    $result = $conn->query($sql);
 
 			    if ($result->num_rows > 0) {
 			         echo "<table> <tr><th>ID</th> <th>Name</th> <th>Year</th></tr>";
 			         // output data of each row
 			         while($row = $result->fetch_assoc()) {
-			             echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["age"]."</td> <td>".$row["song"]."</td> <td>".$row["class"]."</td> <td>".$row["branch"]."</td> </tr>";
+			             echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["academic_year"]."</td> <td>".$row["mobile"]."</td> <td>".$row["web"]."</td>  </tr>";
 			         }
 			         echo "</table>";
 			    } else {
+			         // echo "string in sql";
 			         echo "0 results";
 			    }
 
