@@ -1,9 +1,10 @@
-New improved file structure 
+New improved file structure
 
-	No need of 
-		fetch.php ( for user part only )
+	No need of
+		fetch.php      Removed all four
 		userhome.php
 		chk.php
+		profile.php
 	and all these replaced with testing.php
 
 
@@ -20,12 +21,12 @@ assets
 			_custom.sass + materlize.scss
 
 
-	file		function        													where used							
+	file		function        													where used
 
 core
 	chk.php =  fetching all checkboxes       											home.php,adminhome.php
 	display.php = display * of  all results											    adminhome.php
-	edit.php = for updating profiles													for editing 
+	edit.php = for updating profiles													for editing
 	fetch.php = updating																adminhome, userhome, edit
 	new.php  = registration of new user													registration.php
 	profile-form.php = html for update forms used in edit.php 							edit.php fetch.php
@@ -42,7 +43,7 @@ register.php = new register
 user inputs
 	At the time of reg
 		- Name + Enroll + Branch + Email + pass + M/F
-	In the update Tab 
+	In the update Tab
 		- Gen
 			+ Year (class) `
 			+ DOB			`
@@ -61,7 +62,7 @@ user inputs
 		- Social
 			+ Acting		-- Easy to contact at the time of Events / Representing CLG in intercollege competations
 			+ Dance			--              ''
-			+ Ankering		-- Hosting in various events 
+			+ Ankering		-- Hosting in various events
 			+ Singing		-- Fairwell and Intro in events
 			+ Drama			-- Representing CLG
 			+ Mimicry		--     ''
@@ -88,7 +89,7 @@ user inputs
 
 
 
-includes in admonhome.php     
+includes in admonhome.php
 	dbconnect.php
 	..core/fetch.php
 	index.php
@@ -103,13 +104,13 @@ includes in home.php
 		/edit.php
 		/chk.php
 
-  Additions 
+  Additions
   Front end (user section)
   	MCA in branch dropdown
   	CAtia
   	part of any orgz in GECA
   		SAT , TNP ,BAJA , Robocon , E-CELL
-  	Futrure plans add other specify   
+  	Futrure plans add other specify
   	Mobile Number
   	What's Up
 

@@ -99,7 +99,7 @@
 	                <label for="male">Localite</label>
 	            </span>
 	            <span>
-	                <input type="radio" name="gender" value="female" class="with-gap" id="female" />
+	                <input type="radio" name="gender" value="Female" class="with-gap" id="female" />
 	                <label for="female">Hostelite</label>
 	            </span>
 
