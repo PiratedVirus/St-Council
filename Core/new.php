@@ -19,7 +19,7 @@
 
 
  if ( isset($_POST['btn-signup']) ) {
-  
+
   // clean user inputs to prevent sql injections
   $name = trim($_POST['name']);
   $name = strip_tags($name);
@@ -28,19 +28,19 @@
   $enroll = trim($_POST['enroll']);
   $enroll = strip_tags($enroll);
   $enroll = htmlspecialchars($enroll);
-  
+
   $email = trim($_POST['email']);
   $email = strip_tags($email);
   $email = htmlspecialchars($email);
-  
+
   $pass = trim($_POST['pass']);
   $pass = strip_tags($pass);
   $pass = htmlspecialchars($pass);
-  
 
-  $class = trim($_POST['class']);
-  $class = strip_tags($class);
-  $class = htmlspecialchars($class);
+
+  // $class = trim($_POST['class']);
+  // $class = strip_tags($class);
+  // $class = htmlspecialchars($class);
 
   $skill = trim($_POST['skill']);
   $skill = strip_tags($skill);
@@ -63,7 +63,7 @@
    $nameError = "Name must contain alphabets and space.";
 
   }
-  
+
   //Enrollment valditation
 
   if (empty($enroll)) {
@@ -128,13 +128,13 @@
 
   // Gender
   $gender=$_POST['gender'];
-  
+
   // if there's no error, continue to signup
   if( !$error ) {
-   
-   $query = "INSERT INTO users(userId,userName,userEmail,userPass,skills,class,gender) VALUES('$enroll','$name','$email','$password','$skill','$class','$gender')";
+
+   $query = "INSERT INTO users(userId,userName,userEmail,userPass,skills,gender) VALUES('$enroll','$name','$email','$password','$skill','$gender')";
    $res = mysqli_query($conn,$query);
-    
+
    if ($res) {
     $errTyp = "success";
     $errMSG = "Successfully registered, you may login now";
@@ -143,20 +143,15 @@
     unset($email);
     unset($pass);
     unset($skill);
-    unset($class);
    } else {
     $errTyp = "danger";
-    $errMSG = "Something went wrong, try again later..."; 
-   } 
-    
+    $errMSG = "Something went wrong, try again later...";
+   }
+
   }
-  
-  
+
+
  }
 
 
- if (isset($_POST['check1'])) {
-
-     echo "string";
- }
 ?>
