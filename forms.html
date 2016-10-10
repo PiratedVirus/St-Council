@@ -1,0 +1,57 @@
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+
+        <div class="input-field col s6">
+          <input placeholder="Enrollment Number" id="label-enroll" type="text" class="validate" maxlength="11" value="<?php echo $enroll ?>">
+          <label for="label-enroll" data-error="<?php echo $enrollError; ?>" >Enrollment Number</label>
+        </div>
+
+        <div class="input-field col s6">
+          <input id="label-name" type="text" class="validate">
+          <label for="label-name" data-error="<?php echo $nameError; ?>">Name</label>
+        </div>
+
+        <div class="input-field col s6">
+          <input id="label-email" type="email" class="validate">
+          <label for="label-email" data-error="<?php echo $emailError; ?>">email</label>
+        </div>
+
+        <div class="input-field col s6">
+          <input id="label-password" type="password">
+          <label for="label-password" data-error="<?php echo $passError; ?>">password</label>
+        </div>
+
+        <div class="input-field col s6">
+          <input id="name" type="text" class="validate">
+          <label for="name">Name</label>
+        </div>
+
+      </div>
+
+
+
+
+
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+          <label for="disabled">Disabled</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+    </form>
+  </div>
+        

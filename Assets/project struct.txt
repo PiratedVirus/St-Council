@@ -1,0 +1,116 @@
+New improved file structure 
+
+	No need of 
+		fetch.php ( for user part only )
+		userhome.php
+		chk.php
+	and all these replaced with testing.php
+
+
+assets
+
+--css
+  --base.css
+  --sass
+	--components
+		--_custom.sass = styles.sass + team.sass
+		--team.sass
+	--materlize.scss
+	--base.sass -> components/
+			_custom.sass + materlize.scss
+
+
+	file		function        													where used							
+
+core
+	chk.php =  fetching all checkboxes       											home.php,adminhome.php
+	display.php = display * of  all results											    adminhome.php
+	edit.php = for updating profiles													for editing 
+	fetch.php = updating																adminhome, userhome, edit
+	new.php  = registration of new user													registration.php
+	profile-form.php = html for update forms used in edit.php 							edit.php fetch.php
+	profile.php = Fetching all checkboxes												NOT USED
+	sorting.php = sorter 																adminhome.php
+	user.php = getting all inputs from sql $get query, creating session vars 			index.php
+	userhome.php = select * from and saved into $res 									home.php
+
+
+home.php = user landing page
+register.php = new register
+--------------------------------------------
+
+user inputs
+	At the time of reg
+		- Name + Enroll + Branch + Email + pass + M/F
+	In the update Tab 
+		- Gen
+			+ Year (class) `
+			+ DOB			`
+			+ Address -> Localite or Hostelite and State (J&K OR MH)	`
+			+ Last year CGPA (x)
+			+ DSE / 12th (x)
+
+		- Technical (Task -- Need in GECA)
+			+ Web 			-- Developing pending website
+			+ App 			-- New Era of Apps in CLg
+			+ Networking	-- Providing Internet at arious events in clg
+			+ Photoshop		-- Posters for events
+			+ Animation		-- For Socail Team
+			+ MEch Team
+			+ Robocorn
+		- Social
+			+ Acting		-- Easy to contact at the time of Events / Representing CLG in intercollege competations
+			+ Dance			--              ''
+			+ Ankering		-- Hosting in various events 
+			+ Singing		-- Fairwell and Intro in events
+			+ Drama			-- Representing CLG
+			+ Mimicry		--     ''
+			+ Writing		-- Theme writing
+			+ Poetry		-- Decorting theme with poems
+			+ Drawing / Doodling   ""
+			+ Decoraction / Design ""
+			+ Painting			   ""
+		- Sports
+			+ Cricket
+			+ Badminton
+			+ Football
+			+ Chess
+			+ .....
+			+ Specify UR Histroy -- Ease in Team Selection
+		- Management
+			+ Leader
+			+ Member
+
+		- Future 	-- Easy To coordinate while arranging Seminars
+		 	+ PG
+		 	+ Job
+		 	+ Other
+
+
+
+includes in admonhome.php     
+	dbconnect.php
+	..core/fetch.php
+	index.php
+	../core/display.php
+			edit.php
+			sorting.php
+			chk.php
+
+includes in home.php
+	dbconnect.php
+	core/userHome.php  -- fetch.php
+		/edit.php
+		/chk.php
+
+  Additions 
+  Front end (user section)
+  	MCA in branch dropdown
+  	CAtia
+  	part of any orgz in GECA
+  		SAT , TNP ,BAJA , Robocon , E-CELL
+  	Futrure plans add other specify   
+  	Mobile Number
+  	What's Up
+
+  	Admin
