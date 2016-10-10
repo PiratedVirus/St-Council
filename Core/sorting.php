@@ -260,7 +260,22 @@
 
 		}
 
+		$sql = "SELECT * FROM users WHERE (academic_year = '$fe' or academic_year = '$se' or academic_year = '$te' or academic_year = '$be') and ( Skills = '$cse' or Skills = '$mech' or Skills = '$civil' or Skills = '$entc' or Skills = '$it' or Skills = '$elect' ) ";
+		$result = $conn->query($sql);
 
+		if ($result->num_rows > 0) {
+			 echo "<table> <tr><th>ID</th> <th>Name</th> <th>Year</th></tr>";
+			 // output data of each row
+			 while($row = $result->fetch_assoc()) {
+				 echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["academic_year"]."</td> <td>".$row["mobile"]."</td> <td>".$row["web"]."</td>  </tr>";
+			 }
+			 echo "</table>";
+		} else {
+			 // echo "string in sql";
+			 echo "0 results";
+		}
+
+		$conn->close();
 
 ?>
 <!DOCTYPE html>
@@ -271,16 +286,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 
   <title>Welcome  Admin </title>
-
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
   <link rel="stylesheet" href="../Assets/css/base.css">
+
 </head>
 <body>
 
 		<form action="sorting.php" method="POST">
-
-
-
 					<div class="form-group">
 						 <hr />
 						 <input type="checkbox" name="FE" id="fe">
@@ -289,13 +300,10 @@
 						 <label for="se">Second Year</label>
 						 <input type="checkbox" name="TE" id="te">
 						 <label for="te">Third Year</label>
-						 <input type="checkbox" name="BE">
+						 <input type="checkbox" name="BE" id="be">
 						 <label for="be">Final Year</label>
-
-
-
-
 					</div>
+
 					<div class="form-group">
 						 <hr />
 						 <input type="checkbox" name="CSE" id="cse">
@@ -377,28 +385,153 @@
 
 		</form>
 
-		<?php
+		<div class="row ">
 
-				$sql = "SELECT * FROM users WHERE (academic_year = '$fe' or academic_year = '$se' or academic_year = '$te' or academic_year = '$be') and ( Skills = '$cse' or Skills = '$mech' or Skills = '$civil' or Skills = '$entc' or Skills = '$it' or Skills = '$elect' ) ";
-			    $result = $conn->query($sql);
+			  <div class="col s12">
+					<ul class="tabs tab-holder" style="width: 100%;margin: 60px 0px 20px 0px;">
+					  <li class="tab col s3"><a href="#technical">Technical</a></li>
+					  <li class="tab col s3"><a href="#Social">Social</a></li>
+					  <li class="tab col s3"><a href="#Sports">Sports</a></li>
+					  <li class="tab col s3"><a href="#Managment">Management</a></li>
+					</ul>
+			  </div>
 
-			    if ($result->num_rows > 0) {
-			         echo "<table> <tr><th>ID</th> <th>Name</th> <th>Year</th></tr>";
-			         // output data of each row
-			         while($row = $result->fetch_assoc()) {
-			             echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["academic_year"]."</td> <td>".$row["mobile"]."</td> <td>".$row["web"]."</td>  </tr>";
-			         }
-			         echo "</table>";
-			    } else {
-			         // echo "string in sql";
-			         echo "0 results";
-			    }
+			  <div id="technical" class="col s12">
+					<p class="col m4 s6">
+					  <input type="checkbox" name="web" id="web" />
+					  <label for="web">Web Designing and Developing</label>
+					</p>
 
-			    $conn->close();
-			?>
+					<p class="col m4 s6">
+					  <input type="checkbox" name="app" id="App"  />
+					  <label for="App">App Developing</label>
+					</p>
+
+					<p class="col m4 s6">
+					  <input type="checkbox" name="graphics" id="graphics"  />
+					  <label for="graphics">Photoshop / Illustrator </label>
+					</p>
+
+					<p class="col m4 s6">
+					  <input type="checkbox" name="animations" id="animations"  />
+					  <label for="animations">Animations</label>
+					</p>
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Networking" id="Networking"  />
+					  <label for="Networking">Networking</label>
+					</p>
+
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Autocad" id="Autocad"  />
+					  <label for="Autocad">Autocad</label>
+					</p>
+
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Katia" id="Katia"  />
+					  <label for="Katia">Katia</label>
+					</p>
+
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Robocon" id="Robocon"  />
+					  <label for="Robocon">Robocon</label>
+					</p>
+
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Other..." id="Other..."  />
+					  <label for="Other...">Other...</label>
+					</p>
+			  </div>
+
+			  <div id="Social" class="col s12">
+					<p class="col m4 s6">
+					  <input type="checkbox" name="act" id="act" />
+					  <label for="act">Acting</label>
+					</p>
+
+					<p class="col m4 s6">
+					  <input type="checkbox" name="dance" id="dance"  />
+					  <label for="dance">Dance</label>
+					</p>
+
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Ankering" id="Ankering"  />
+					  <label for="Ankering">Ankering / Hosting</label>
+					</p>
+
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Singing" id="Singing"  />
+					  <label for="Singing">Singing</label>
+					</p>
+
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Drama" id="Drama"  />
+					  <label for="Drama">Drama</label>
+					</p>
+
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Writing" id="Writing"  />
+					  <label for="Writing">Writing</label>
+					</p>
+
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Poetry" id="Poetry"  />
+					  <label for="Poetry">Poetry</label>
+					</p>
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Drawing" id="Drawing"  />
+					  <label for="Drawing">Drawing</label>
+					</p>
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Decoraction / Design" id="Decoraction / Design"  />
+					  <label for="Decoraction / Design">Decoraction / Design</label>
+					</p>
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Painting" id="Painting"  />
+					  <label for="Painting">Painting</label>
+					</p>
+			   </div>
+
+			  <div id="Sports" class="col s12">
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Cricket" id="Cricket"  />
+					  <label for="Cricket">Cricket</label>
+					</p>
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Badminton" id="Badminton"  />
+					  <label for="Badminton">Badminton</label>
+					</p>
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Football" id="Football"  />
+					  <label for="Football">Football</label>
+					</p>
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Chess" id="Chess"  />
+					  <label for="Chess">Chess</label>
+					</p>
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Kabbadi" id="Kabbadi"  />
+					  <label for="Kabbadi">Kabbadi</label>
+					</p>
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Vollyball" id="Vollyball"  />
+					  <label for="Vollyball">Vollyball</label>
+					</p>
+			 </div>
+
+			  <div id="Managment" class="col s12">
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Leader" id="Leader"  />
+					  <label for="Leader">Leader</label>
+					</p>
+					<p class="col m4 s6">
+					  <input type="checkbox" name="Member" id="Member"  />
+					  <label for="Member">Member</label>
+					</p>
+			  </div>
+
+		</div>
 
 
-		 ?>
 		 <script src="../Assets/js/jquery-1.11.3-jquery.min.js"></script>
 	     <script src="../Assets/js/materialize.js"></script>
 	     <script src="../Assets/js/init.js"></script>
