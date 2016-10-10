@@ -115,8 +115,135 @@
 			    }
 
 		}
+
 	if (isset($_POST['single-civil'])) {
 			$query_civil = "SELECT * FROM users WHERE Skills = 'Civil Engineering'";
+
+			    $civil_result = $conn->query($query_civil);
+
+			    if ($civil_result->num_rows > 0) {
+			         echo "<table> <tr><th>ID</th> <th>Name</th> <th>Year</th></tr>";
+			         // output data of each row
+			         while($row = $civil_result->fetch_assoc()) {
+			         	echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["academic_year"]."</td> <td>".$row["mobile"]."</td> <td>".$row["web"]."</td>  </tr>";
+			         }
+			         echo "</table>";
+			    } else {
+			         echo "0 results";
+			    }
+
+		}
+
+	if (isset($_POST['single-entc'])) {
+			$query_civil = "SELECT * FROM users WHERE Skills = 'Elctronics And Telecommunications'";
+
+			    $civil_result = $conn->query($query_civil);
+
+			    if ($civil_result->num_rows > 0) {
+			         echo "<table> <tr><th>ID</th> <th>Name</th> <th>Year</th></tr>";
+			         // output data of each row
+			         while($row = $civil_result->fetch_assoc()) {
+			         	echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["academic_year"]."</td> <td>".$row["mobile"]."</td> <td>".$row["web"]."</td>  </tr>";
+			         }
+			         echo "</table>";
+			    } else {
+			         echo "0 results";
+			    }
+
+		}
+
+	if (isset($_POST['single-it'])) {
+			$query_civil = "SELECT * FROM users WHERE Skills = 'Information Technology'";
+
+			    $civil_result = $conn->query($query_civil);
+
+			    if ($civil_result->num_rows > 0) {
+			         echo "<table> <tr><th>ID</th> <th>Name</th> <th>Year</th></tr>";
+			         // output data of each row
+			         while($row = $civil_result->fetch_assoc()) {
+			         	echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["academic_year"]."</td> <td>".$row["mobile"]."</td> <td>".$row["web"]."</td>  </tr>";
+			         }
+			         echo "</table>";
+			    } else {
+			         echo "0 results";
+			    }
+
+		}
+
+	if (isset($_POST['single-elect'])) {
+			$query_civil = "SELECT * FROM users WHERE Skills = 'Electrical Engineering'";
+
+			    $civil_result = $conn->query($query_civil);
+
+			    if ($civil_result->num_rows > 0) {
+			         echo "<table> <tr><th>ID</th> <th>Name</th> <th>Year</th></tr>";
+			         // output data of each row
+			         while($row = $civil_result->fetch_assoc()) {
+			         	echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["academic_year"]."</td> <td>".$row["mobile"]."</td> <td>".$row["web"]."</td>  </tr>";
+			         }
+			         echo "</table>";
+			    } else {
+			         echo "0 results";
+			    }
+
+		}
+
+	if (isset($_POST['single-fe'])) {
+			$query_civil = "SELECT * FROM users WHERE academic_year = 'First Year'";
+
+			    $civil_result = $conn->query($query_civil);
+
+			    if ($civil_result->num_rows > 0) {
+			         echo "<table> <tr><th>ID</th> <th>Name</th> <th>Year</th></tr>";
+			         // output data of each row
+			         while($row = $civil_result->fetch_assoc()) {
+			         	echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["academic_year"]."</td> <td>".$row["mobile"]."</td> <td>".$row["web"]."</td>  </tr>";
+			         }
+			         echo "</table>";
+			    } else {
+			         echo "0 results";
+			    }
+
+		}
+
+	if (isset($_POST['single-se'])) {
+			$query_civil = "SELECT * FROM users WHERE academic_year = 'Second Year'";
+
+			    $civil_result = $conn->query($query_civil);
+
+			    if ($civil_result->num_rows > 0) {
+			         echo "<table> <tr><th>ID</th> <th>Name</th> <th>Year</th></tr>";
+			         // output data of each row
+			         while($row = $civil_result->fetch_assoc()) {
+			         	echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["academic_year"]."</td> <td>".$row["mobile"]."</td> <td>".$row["web"]."</td>  </tr>";
+			         }
+			         echo "</table>";
+			    } else {
+			         echo "0 results";
+			    }
+
+		}
+
+	if (isset($_POST['single-te'])) {
+			$query_civil = "SELECT * FROM users WHERE academic_year = 'Third Year'";
+
+			    $civil_result = $conn->query($query_civil);
+
+			    if ($civil_result->num_rows > 0) {
+			         echo "<table> <tr><th>ID</th> <th>Name</th> <th>Year</th></tr>";
+			         // output data of each row
+			         while($row = $civil_result->fetch_assoc()) {
+			         	echo "<tr> <td> ".$row["userId"]." </td> <td> ".$row["userName"]." </td> <td>  ".$row["userEmail"]." </td> <td>".$row["Skills"]."</td> <td>".$row["academic_year"]."</td> <td>".$row["mobile"]."</td> <td>".$row["web"]."</td>  </tr>";
+			         }
+			         echo "</table>";
+			    } else {
+			         echo "0 results";
+			    }
+
+		}
+
+	if (isset($_POST['single-be'])) {
+			$query_civil = "SELECT * FROM users WHERE academic_year = 'Final Year'";
 
 			    $civil_result = $conn->query($query_civil);
 
@@ -227,6 +354,30 @@
 		<form action="" method="POST" name="singular">
 
 			<input type="submit" value="it" name="single-it">
+
+		</form>
+
+		<form action="" method="POST" name="singular">
+
+			<input type="submit" value="FE" name="single-fe">
+
+		</form>
+
+		<form action="" method="POST" name="singular">
+
+			<input type="submit" value="SE" name="single-se">
+
+		</form>
+
+		<form action="" method="POST" name="singular">
+
+			<input type="submit" value="TE" name="single-te">
+
+		</form>
+
+		<form action="" method="POST" name="singular">
+
+			<input type="submit" value="BE" name="single-be">
 
 		</form>
 
