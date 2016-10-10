@@ -263,57 +263,53 @@
 
 
 ?>
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		<link rel="stylesheet" href="tables.css">
-	</head>
-	<body>
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+
+  <title>Welcome  Admin </title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link rel="stylesheet" href="../Assets/css/base.css">
+</head>
+<body>
 
 		<form action="sorting.php" method="POST">
-			<h3>sort by</h3>
 
-				<!-- <input type="text" list="year" name="user_year" placeholder="year">
-
-					<datalist id="year">
-					    <option value="FE"/>
-					    <option value="SE"/>
-					    <option value="TE"/>
-					    <option value="BE"/>
-					    <option value="0"/>
-					    <option value="1"/>
-					    <option value="20"/>
-
-					</datalist>
-
-
-				<input type="text" list="branches" name="user_branch" placeholder="branch">
-
-					<datalist id="branches">
-					    <option value="CSE"/>
-					    <option value="Mech"/>
-					    <option value="Civil"/>
-					</datalist>
-
-			</h3> -->
 
 
 					<div class="form-group">
 						 <hr />
-						 <input type="checkbox" name="FE">First Year
-						 <input type="checkbox" name="SE">Second Year
-						 <input type="checkbox" name="TE">Third Year
-						 <input type="checkbox" name="BE">Final Year
+						 <input type="checkbox" name="FE" id="fe">
+						 <label for="fe">First Year</label>
+						 <input type="checkbox" name="SE" id="se">
+						 <label for="se">Second Year</label>
+						 <input type="checkbox" name="TE" id="te">
+						 <label for="te">Third Year</label>
+						 <input type="checkbox" name="BE">
+						 <label for="be">Final Year</label>
+
+
+
+
 					</div>
 					<div class="form-group">
 						 <hr />
-						 <input type="checkbox" name="CSE">Computer Science And Engineering
-						 <input type="checkbox" name="Mech">Mechanical Engineering
-						 <input type="checkbox" name="Civil">Civil Engineering
-						 <input type="checkbox" name="Elect">Electrical Engineering
-						 <input type="checkbox" name="Entc">Elctronics And Telecommunications
-						 <input type="checkbox" name="It">Information Technology
+						 <input type="checkbox" name="CSE" id="cse">
+						 <label for="cse">Computer Science And Engineering</label>
+						 <input type="checkbox" name="Mech" id="mech">
+						 <label for="mech">Mechanical Engineering</label>
+						 <input type="checkbox" name="Civil" id="civil">
+						 <label for="civil">Civil Engineering</label>
+						 <input type="checkbox" name="Elect" id="elect">
+						 <label for="elect">Electrical Engineering</label>
+						 <input type="checkbox" name="Entc" id="entc">
+						 <label for="entc">Elctronics And Telecommunications</label>
+						 <input type="checkbox" name="It" id="it">
+						 <label for="it">Information Technology</label>
 					</div>
 
 		    <input type="submit" value="Submit">
@@ -403,7 +399,8 @@
 
 
 		 ?>
-		 <script src="../assets/js/jquery-1.11.3-jquery.min.js"></script>
-		 <script src="../assets/js/bootstrap.min.js"></script>
+		 <script src="../Assets/js/jquery-1.11.3-jquery.min.js"></script>
+	     <script src="../Assets/js/materialize.js"></script>
+	     <script src="../Assets/js/init.js"></script>
 	</body>
 	</html>
