@@ -451,30 +451,37 @@
 			</div>
 
 		</div>
+		<div class="container">
+			<div class="row inline-form">
 
-		<form action="" method="POST" name="singular">
+				<form action="" method="POST" name="singular">
 
-			<input type="submit" value="FE" name="single-fe">
+					<input type="submit" value="FE" name="single-fe">
 
-		</form>
+				</form>
 
-		<form action="" method="POST" name="singular">
+				<form action="" method="POST" name="singular">
 
-			<input type="submit" value="SE" name="single-se">
+					<input type="submit" value="SE" name="single-se">
 
-		</form>
+				</form>
 
-		<form action="" method="POST" name="singular">
+				<form action="" method="POST" name="singular">
 
-			<input type="submit" value="TE" name="single-te">
+					<input type="submit" value="TE" name="single-te">
 
-		</form>
+				</form>
 
-		<form action="" method="POST" name="singular">
+				<form action="" method="POST" name="singular">
 
-			<input type="submit" value="BE" name="single-be">
+					<input type="submit" value="BE" name="single-be">
 
-		</form>
+				</form>
+				
+			</div>
+		</div>
+
+		
 
 		<form method="post" name="multiple-check">
 
