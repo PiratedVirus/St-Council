@@ -76,7 +76,7 @@
 
         <a href="../core/display.php">View Data</a>
         <a href="../core/edit.php">Edit </a>
-        <a href="../core/sorting.php">Sort </a>
+        <a href="../core/sort.php">Sort </a>
 
 
       <input type="text" value="<?php echo $_SESSION['stud_name'] ?>">

@@ -310,40 +310,7 @@
 </head>
 <body>
 
-<nav id="menu">
-    <div class="nav-wrapper">
-
-      <ul id="slide-out" class="side-nav">
-          <li><div class="userView">
-            <img class="background" src="../Assets/img/2.jpg">
-            <a href="#"><img class="circle" src="../Assets/img/user.png"></a>
-            <a href="#"><span  class="black-text name slide-username"> <b><?php echo $_SESSION['stud_name']; ?></b></span></a>
-            <a href="#"><span class="black-text email"><?php echo $_SESSION['stud_email']; ?></span></a>
-          </div></li>
-          <li><a href="#!"><img class="slideicon" src="../Assets/img/eye.png"  alt="">View Profile</a></li>
-          <li><a href="Core/edit.php"><img class="slideicon" src="../Assets/img/editpro.png"  alt="">Edit Profile</a></li>
-          <li><a href="../logout.php?logout"><img class="slideicon" src="../Assets/img/logout.png"  alt="">Log Out</a></li>
-          <li><div class="divider"></div></li>
-          <li><a class="waves-effect" href="#">Events</a></li>
-          <li><a class="waves-effect" href="#">Something</a></li>
-      </ul>
-
-      <a href="#" id="user-menu" data-activates="slide-out" class="button-collapse">
-      <i class="material-icons">menu</i></a>
-
-      <a href="#" class="brand-logo center">Student Council</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-      </ul>
-
-
-    </div>
-  </nav>
-
-
-	<form action="sorting.php" class = "combo" method="POST">
+	<form action="sort.php" class = "combo" method="POST">
 		<div class="container">
 			<div class="row">
 				<div class="form-group combo-year col m3 s12 offset-m2">
@@ -451,37 +418,30 @@
 			</div>
 
 		</div>
-		<div class="container">
-			<div class="row inline-form">
 
-				<form action="" method="POST" name="singular">
+		<form action="" method="POST" name="singular">
 
-					<input type="submit" value="FE" name="single-fe">
+			<input type="submit" value="FE" name="single-fe">
 
-				</form>
+		</form>
 
-				<form action="" method="POST" name="singular">
+		<form action="" method="POST" name="singular">
 
-					<input type="submit" value="SE" name="single-se">
+			<input type="submit" value="SE" name="single-se">
 
-				</form>
+		</form>
 
-				<form action="" method="POST" name="singular">
+		<form action="" method="POST" name="singular">
 
-					<input type="submit" value="TE" name="single-te">
+			<input type="submit" value="TE" name="single-te">
 
-				</form>
+		</form>
 
-				<form action="" method="POST" name="singular">
+		<form action="" method="POST" name="singular">
 
-					<input type="submit" value="BE" name="single-be">
+			<input type="submit" value="BE" name="single-be">
 
-				</form>
-				
-			</div>
-		</div>
-
-		
+		</form>
 
 		<form method="post" name="multiple-check">
 
