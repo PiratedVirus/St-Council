@@ -272,86 +272,153 @@
 
   <title>Welcome  Admin </title>
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/> -->
   <link rel="stylesheet" href="../Assets/css/base.css">
 </head>
 <body>
 
-		<form action="sorting.php" method="POST">
+	<nav id="menu">
+	    <div class="nav-wrapper">
+
+	      <ul id="slide-out" class="side-nav">
+	          <li><div class="userView">
+	            <img class="background" src="../Assets/img/2.jpg">
+	            <a href="#"><img class="circle" src="../Assets/img/user.png"></a>
+	            <a href="#"><span  class="black-text name slide-username"> <b><?php echo $_SESSION['stud_name']; ?></b></span></a>
+	            <a href="#"><span class="black-text email"><?php echo $_SESSION['stud_email']; ?></span></a>
+	          </div></li>
+	          <li><a href="#!"><img class="slideicon" src="../Assets/img/eye.png"  alt="">View Profile</a></li>
+	          <li><a href="Core/edit.php"><img class="slideicon" src="../Assets/img/editpro.png"  alt="">Edit Profile</a></li>
+	          <li><a href="../logout.php?logout"><img class="slideicon" src="../Assets/img/logout.png"  alt="">Log Out</a></li>
+	          <li><div class="divider"></div></li>
+	          <li><a class="waves-effect" href="#">Events</a></li>
+	          <li><a class="waves-effect" href="#">Something</a></li>
+	      </ul>
+
+	      <a href="#" id="user-menu" data-activates="slide-out" class="button-collapse">
+	      <i class="material-icons">menu</i></a>
+
+	      <a href="#" class="brand-logo center">Student Council</a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	        <li><a href="sass.html">Sass</a></li>
+	        <li><a href="badges.html">Components</a></li>
+	        <li><a href="collapsible.html">JavaScript</a></li>
+	      </ul>
 
 
+	    </div>
+</nav>
 
-					<div class="form-group">
-						 <hr />
-						 <input type="checkbox" name="FE" id="fe">
-						 <label for="fe">First Year</label>
-						 <input type="checkbox" name="SE" id="se">
-						 <label for="se">Second Year</label>
-						 <input type="checkbox" name="TE" id="te">
-						 <label for="te">Third Year</label>
-						 <input type="checkbox" name="BE">
-						 <label for="be">Final Year</label>
+		<form action="sorting.php" class = "combo" method="POST">
+			<div class="container">
+				<div class="row">
+					<div class="form-group combo-year col m3 s12 offset-m2">
+						<p>
 
+							<input type="checkbox" name="FE" id="fe">
+							<label for="fe">First Year</label>
+						</p>
+						<p>
 
+							<input type="checkbox" name="SE" id="se">
+							<label for="se">Second Year</label>
+						</p>
+						<p>
 
+							<input type="checkbox" name="TE" id="te">
+							<label for="te">Third Year</label>
+						</p>
+						<p>
 
+							<input type="checkbox" name="BE" id="be">
+							<label for="be">Final Year</label>
+						</p>
 					</div>
-					<div class="form-group">
-						 <hr />
-						 <input type="checkbox" name="CSE" id="cse">
-						 <label for="cse">Computer Science And Engineering</label>
-						 <input type="checkbox" name="Mech" id="mech">
-						 <label for="mech">Mechanical Engineering</label>
-						 <input type="checkbox" name="Civil" id="civil">
-						 <label for="civil">Civil Engineering</label>
-						 <input type="checkbox" name="Elect" id="elect">
-						 <label for="elect">Electrical Engineering</label>
-						 <input type="checkbox" name="Entc" id="entc">
-						 <label for="entc">Elctronics And Telecommunications</label>
-						 <input type="checkbox" name="It" id="it">
-						 <label for="it">Information Technology</label>
+					<a class="btn-floating btn-large waves-effect waves-light red mid-btn"><i class="material-icons">add</i></a>
+					<div class="form-group combo-branch col m6 s12">
+						<p>
+
+							<input type="checkbox" name="CSE" id="cse">
+							<label for="cse">Computer Science And Engineering</label>
+						</p>
+						<p>
+
+							<input type="checkbox" name="Mech" id="mech">
+							<label for="mech">Mechanical Engineering</label>
+						</p>
+						<p>
+
+							<input type="checkbox" name="Civil" id="civil">
+							<label for="civil">Civil Engineering</label>
+						</p>
+						<p>
+
+							<input type="checkbox" name="Elect" id="elect">
+							<label for="elect">Electrical Engineering</label>
+						</p>
+						<p>
+
+							<input type="checkbox" name="Entc" id="entc">
+							<label for="entc">Elctronics And Telecommunications</label>
+						</p>
+						<p>
+
+							<input type="checkbox" name="It" id="it">
+							<label for="it">Information Technology</label>
+						</p>
+						<input type="submit" value="Submit">
 					</div>
 
-		    <input type="submit" value="Submit">
+				</div>
+			</div>
+
+
 
 
 		</form>
 
-		<form action="" method="POST" name="singular">
+		<div class="container">
+			<div class="row inline-form">
+				<form action="" method="POST" name="singular">
 
-			<input type="submit" value="CSE" name="single-cse">
+					<input type="submit" class="imgbtn col m2 s4" value="Cse" name="single-cse">
 
-		</form>
+				</form>
 
-		<form action="" method="POST" name="singular">
+				<form action="" method="POST" name="singular">
 
-			<input type="submit" value="mech" name="single-mech">
+					<input type="submit" class="imgbtn col m2 s4" value="Mech" name="single-mech">
+						
+				</form>
 
-		</form>
+				<form action="" method="POST" name="singular">
 
-		<form action="" method="POST" name="singular">
+					<input type="submit" class="imgbtn col m2 s4" value="Civil" name="single-civil">
 
-			<input type="submit" value="Civil" name="single-civil">
+				</form>
 
-		</form>
+				<form action="" method="POST" name="singular">
 
-		<form action="" method="POST" name="singular">
+					<input type="submit" class="imgbtn col m2 s4" value="EnTC" name="single-entc">
 
-			<input type="submit" value="entc" name="single-entc">
+				</form>
 
-		</form>
+				<form action="" method="POST" name="singular">
 
-		<form action="" method="POST" name="singular">
+					<input type="submit" class="imgbtn col m2 s4" value="Elect" name="single-elect">
 
-			<input type="submit" value="elect" name="single-elect">
+				</form>
 
-		</form>
+				<form action="" method="POST" name="singular">
 
-		<form action="" method="POST" name="singular">
+					<input type="submit" class="imgbtn col m2 s4" value="IT" name="single-it">
 
-			<input type="submit" value="it" name="single-it">
+				</form>
+			</div>
 
-		</form>
+		</div>
+
+
 
 		<form action="" method="POST" name="singular">
 
