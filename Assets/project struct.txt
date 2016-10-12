@@ -115,3 +115,13 @@ includes in home.php
   	What's Up
 
   	Admin
+
+ What to display 
+   enrollment
+   name 
+   mail
+   mobile
+   male/female
+   branch
+   class/year
+

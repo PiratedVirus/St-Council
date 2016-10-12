@@ -170,19 +170,75 @@ nav#subpages ul a, nav#subpages .brand-logo {
   margin-left: -75px;
 }
 
+.form-header {
+  color: #d3d3d3;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 36px;
+  font-weight: bolder;
+  display: inline;
+  position: relative;
+  top: -30px;
+  background-color: #fff;
+  padding: 0px 20px;
+}
+
+.edit {
+  margin-bottom: 80px;
+  color: #9e9e9e;
+}
+
+.top-line {
+  margin-top: 40px;
+}
+
+.header-holder {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
 .imgbtn {
-  border: 0px;
+  border: 1px solid transparent;
   height: 150px;
   width: 150px;
   background-color: #FFF;
-  background-size: cover;
-  background-position: 0 0;
   border-radius: 50%;
+  text-transform: uppercase;
 }
 
 .imgbtn:hover {
-  transition: .2s;
-  border: 2px solid #a1e1e1;
+  transition: all ease-in-out .5s;
+  background-color: #ee6e73;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 20px;
+  transform: scale(1.1);
+}
+
+.combo-sort {
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border: 2px solid teal;
+  background-color: #FFF;
+  color: teal;
+  border-radius: 30px;
+  position: relative;
+  margin-left: 38%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.combo-sort:hover, .combo-sort:active, .combo-sort:focus {
+  transition: all ease-in .5s;
+  background-color: teal;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
 }
 
 .inline-form form {
